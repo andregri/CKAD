@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ambassador-app
+spec:
+  containers:
+  - name: app
+    image: radial/busyboxplus:curl
+    command: ['sh', '-c', 'while true; do curl localhost:8080; sleep 5; done']
+
+  - name: ambassador
+    image: haproxy:2.4
+    volumeMounts:
+    - name: config
+      mountPath: usr/local/etc/haproxy/
+
+  volumes:
+  - name: config
+    configMap:
+      name: haproxy-config
