@@ -20,7 +20,7 @@ kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 
 
 At this point, if you access http://myapp.localdev.me:8080/, you should see NGINX default page.
 
-Note that localdev.me points to localhost! See [here](https://mxtoolbox.com/SuperTool.aspx?action=a%3ademo.localdev.me&run=toolpage).
+Note that localdev.me points to localhost! See [Stackoverflow question](https://stackoverflow.com/questions/70531119/why-do-i-have-to-edit-etc-hosts-just-sometimes-when-using-nginx-ingress-control) and [dns](https://mxtoolbox.com/SuperTool.aspx?action=a%3ademo.localdev.me&run=toolpage).
 
 ## What I've learned
 
